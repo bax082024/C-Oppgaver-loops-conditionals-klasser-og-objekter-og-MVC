@@ -12,4 +12,18 @@ public class View
     }
   }
 
+  public void ShowMenu()
+  {
+    Console.WriteLine("\nMenu");
+    Console.WriteLine("1. Add Beer");
+    Console.WriteLine("2. Remove Beer");
+    Console.WriteLine("3. Show Beers");
+    Console.WriteLine("4. Exit");
+
+    {
+      
+    }
+
+  }
+
 }
