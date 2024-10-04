@@ -19,11 +19,11 @@ public class View
     Console.WriteLine("2. Remove Beer");
     Console.WriteLine("3. Show Beers");
     Console.WriteLine("4. Exit");
+  }
 
-    {
-      
-    }
-
+  public void ShowMessage(string message)
+  {
+    Console.WriteLine();
   }
 
 }
