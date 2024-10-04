@@ -27,17 +27,31 @@ public void Run()
       case "1":
       Console.Write("Enter beer name:"); // Console.write because i want it in 1 line (Console.Writeline for new line)
       string name = Console.ReadLine();
-      Console.Write("Enter beer type (e.g., tuborg, IPA, Heineken, Hansa)");
+      Console.Write("Enter beer type (e.g., tuborg, 7Fjell, Heineken, Hansa)"); // type of beer you want to add
       string type = Console.ReadLine();
       _model.AddBeer(name, type);
       _view.ShadowMessage("Beer added");
       break;
 
       case "2":
-      Console.Write("Enter beer name to remove:")
+      Console.Write("Enter beer name to remove:") // remove beer
+      string removeName = Console.ReadLine();
+      _model.RemoveBeer(removename);
+      _view.ShowMessage("Beer removed");
+      break;
 
+      case "3":
+      _view-DisplayBeers(_model.GetBeers()); // display beers 
+      break;
 
+      case "4":
+      exit = true;
+      _view.ShowMessage("Exiting Program......."); // exit program
+      break;
+
+      default:
+      _view.ShowMessage("Invalid choice. Please try again.");
+      break;
     }
-
   }
 }
