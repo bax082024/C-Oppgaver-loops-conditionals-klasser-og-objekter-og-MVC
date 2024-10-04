@@ -1,57 +1,57 @@
 using System;
-using System.Drawing;
 
-public class Controller
+namespace BeerMVC.Controllers // Replace with your actual namespace
 {
-  private Model _model;
-  private View _view;
-}
-
-public Controller(Model model,View view)
-{
-  _model = model;
-  _view = view;
-}
-
-public void Run()
-{
-  bool exit = false;
-  while (!exit)
-  {
-    _view:Showmenu();
-    Console.WriteLine("Choose an option"); // choose what you want to do!
-    string choice = Console.ReadLine();
-
-    switch (choice)
+    public class Controller
     {
-      case "1":
-      Console.Write("Enter beer name:"); // Console.write because i want it in 1 line (Console.Writeline for new line)
-      string name = Console.ReadLine();
-      Console.Write("Enter beer type (e.g., tuborg, 7Fjell, Heineken, Hansa)"); // type of beer you want to add
-      string type = Console.ReadLine();
-      _model.AddBeer(name, type);
-      _view.ShadowMessage("Beer added");
-      break;
+        private Model model; // Ensure that the Model class is defined and accessible
+        private View view; // Ensure that the View class is defined and accessible
 
-      case "2":
-      Console.Write("Enter beer name to remove:") // remove beer
-      string removeName = Console.ReadLine();
-      _model.RemoveBeer(removename);
-      _view.ShowMessage("Beer removed");
-      break;
+        public Controller(Model model, View view)
+        {
+            this.model = model;
+            this.view = view;
+        }
 
-      case "3":
-      _view-DisplayBeers(_model.GetBeers()); // display beers 
-      break;
+        public void AddBeer()
+        {
+            Console.WriteLine("Enter beer name:");
+            string name = Console.ReadLine();
 
-      case "4":
-      exit = true;
-      _view.ShowMessage("Exiting Program......."); // exit program
-      break;
+            Console.WriteLine("Enter beer type:");
+            string type = Console.ReadLine();
 
-      default:
-      _view.ShowMessage("Invalid choice. Please try again.");
-      break;
+            // Check for null or empty values
+            if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(type))
+            {
+                view.ShowMessage("Beer name and type cannot be empty.");
+                return;
+            }
+
+            model.AddBeer(name, type); // Ensure AddBeer method exists in Model
+            view.ShowMessage("Beer added successfully!");
+        }
+
+        public void RemoveBeer()
+        {
+            Console.WriteLine("Enter the name of the beer to remove:");
+            string name = Console.ReadLine();
+
+            // Check for null or empty value
+            if (string.IsNullOrEmpty(name))
+            {
+                view.ShowMessage("Beer name cannot be empty.");
+                return;
+            }
+
+            if (model.RemoveBeer(name)) // Ensure RemoveBeer method exists in Model
+            {
+                view.ShowMessage("Beer removed successfully!");
+            }
+            else
+            {
+                view.ShowMessage("Beer not found.");
+            }
+        }
     }
-  }
 }

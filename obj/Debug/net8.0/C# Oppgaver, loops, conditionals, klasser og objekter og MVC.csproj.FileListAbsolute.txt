@@ -1,0 +1,15 @@
+C:\HjemmeKode\C-Sharp\C-Sharp\C# Oppgaver, loops, conditionals, klasser og objekter og MVC\obj\Debug\net8.0\C# Oppgaver, loops, conditionals, klasser og objekter og MVC.GeneratedMSBuildEditorConfig.editorconfig
+C:\HjemmeKode\C-Sharp\C-Sharp\C# Oppgaver, loops, conditionals, klasser og objekter og MVC\obj\Debug\net8.0\C# Oppgaver, loops, conditionals, klasser og objekter og MVC.AssemblyInfoInputs.cache
+C:\HjemmeKode\C-Sharp\C-Sharp\C# Oppgaver, loops, conditionals, klasser og objekter og MVC\obj\Debug\net8.0\C# Oppgaver, loops, conditionals, klasser og objekter og MVC.AssemblyInfo.cs
+C:\HjemmeKode\C-Sharp\C-Sharp\C# Oppgaver, loops, conditionals, klasser og objekter og MVC\obj\Debug\net8.0\C# Oppgaver, loops, conditionals, klasser og objekter og MVC.csproj.CoreCompileInputs.cache
+C:\HjemmeKode\C-Sharp\C-Sharp\C# Oppgaver, loops, conditionals, klasser og objekter og MVC\obj\Debug\net8.0\C# Oppgaver, loops, conditionals, klasser og objekter og MVC.sourcelink.json
+C:\HjemmeKode\C-Sharp\C-Sharp\C# Oppgaver, loops, conditionals, klasser og objekter og MVC\bin\Debug\net8.0\C# Oppgaver, loops, conditionals, klasser og objekter og MVC.exe
+C:\HjemmeKode\C-Sharp\C-Sharp\C# Oppgaver, loops, conditionals, klasser og objekter og MVC\bin\Debug\net8.0\C# Oppgaver, loops, conditionals, klasser og objekter og MVC.deps.json
+C:\HjemmeKode\C-Sharp\C-Sharp\C# Oppgaver, loops, conditionals, klasser og objekter og MVC\bin\Debug\net8.0\C# Oppgaver, loops, conditionals, klasser og objekter og MVC.runtimeconfig.json
+C:\HjemmeKode\C-Sharp\C-Sharp\C# Oppgaver, loops, conditionals, klasser og objekter og MVC\bin\Debug\net8.0\C# Oppgaver, loops, conditionals, klasser og objekter og MVC.dll
+C:\HjemmeKode\C-Sharp\C-Sharp\C# Oppgaver, loops, conditionals, klasser og objekter og MVC\bin\Debug\net8.0\C# Oppgaver, loops, conditionals, klasser og objekter og MVC.pdb
+C:\HjemmeKode\C-Sharp\C-Sharp\C# Oppgaver, loops, conditionals, klasser og objekter og MVC\obj\Debug\net8.0\C# Oppgaver, loops, conditionals, klasser og objekter og MVC.dll
+C:\HjemmeKode\C-Sharp\C-Sharp\C# Oppgaver, loops, conditionals, klasser og objekter og MVC\obj\Debug\net8.0\refint\C# Oppgaver, loops, conditionals, klasser og objekter og MVC.dll
+C:\HjemmeKode\C-Sharp\C-Sharp\C# Oppgaver, loops, conditionals, klasser og objekter og MVC\obj\Debug\net8.0\C# Oppgaver, loops, conditionals, klasser og objekter og MVC.pdb
+C:\HjemmeKode\C-Sharp\C-Sharp\C# Oppgaver, loops, conditionals, klasser og objekter og MVC\obj\Debug\net8.0\C# Oppgaver, loops, conditionals, klasser og objekter og MVC.genruntimeconfig.cache
+C:\HjemmeKode\C-Sharp\C-Sharp\C# Oppgaver, loops, conditionals, klasser og objekter og MVC\obj\Debug\net8.0\ref\C# Oppgaver, loops, conditionals, klasser og objekter og MVC.dll

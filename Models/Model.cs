@@ -1,54 +1,30 @@
 using System.Collections.Generic;
 
-
-
-public class Beer
+namespace BeerMVC.Models // Replace with your actual namespace
 {
-  public string Name { get; set; }
-  public int Type { get; set; }
+    public class Model
+    {
+        private List<Beer> beers; // Ensure Beer class is defined
 
-  public Beer(string name, string type)
-  {
-    Name = name;
-    Type = type;
-  }
+        public Model()
+        {
+            beers = new List<Beer>();
+        }
 
-  public override string ToString()
-  {
-      return $"{Name} ({Type})";
-  }
-}
+        public void AddBeer(string name, string type)
+        {
+            beers.Add(new Beer(name, type)); // Make sure Beer class has the appropriate constructor
+        }
 
-public class Model
-{
-  public List<Beer> Beers { get; set; } = new List<Beer>;
-
-  public void Addbeer(string name, string type)
-  {
-    Beers.Add(new Beer(name, type));
-  }
-
-  public void RemoveBeer(string name)
-  {
-    Beers.RemoveAll(base => base.Name.Equals(name, System.StringComparison.OrdinalIgnoreCase));
-  }
-
-  public List<Beer> GetBeers()
-  {
-    return Beers;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-public class Model
-{
-  public List<Beer> Beers { get; set;}
+        public bool RemoveBeer(string name)
+        {
+            var beerToRemove = beers.Find(b => b.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
+            if (beerToRemove != null)
+            {
+                beers.Remove(beerToRemove);
+                return true;
+            }
+            return false;
+        }
+    }
 }

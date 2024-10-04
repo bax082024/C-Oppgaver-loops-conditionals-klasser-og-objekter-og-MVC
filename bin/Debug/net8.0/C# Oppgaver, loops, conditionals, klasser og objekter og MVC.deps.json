@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "C# Oppgaver, loops, conditionals, klasser og objekter og MVC/1.0.0": {
+        "runtime": {
+          "C# Oppgaver, loops, conditionals, klasser og objekter og MVC.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "C# Oppgaver, loops, conditionals, klasser og objekter og MVC/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
