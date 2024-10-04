@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("C# Oppgaver, loops, conditionals, klasser og objekter og MVC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ceaf9ebaf2ecb1140ad3a2407f2f1cf0316d0db0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3f2820082267dd37e6da3dfe6777cbdd09c05e48")]
 [assembly: System.Reflection.AssemblyProductAttribute("C# Oppgaver, loops, conditionals, klasser og objekter og MVC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("C# Oppgaver, loops, conditionals, klasser og objekter og MVC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
