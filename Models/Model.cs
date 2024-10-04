@@ -13,11 +13,30 @@ public class Beer
     Type = type;
   }
 
-    public override string ToString()
-    {
-        return $"{Name} ({Type})";
-    }
+  public override string ToString()
+  {
+      return $"{Name} ({Type})";
+  }
+}
 
+public class Model
+{
+  public List<Beer> Beers { get; set; } = new List<Beer>;
+
+  public void Addbeer(string name, string type)
+  {
+    Beers.Add(new Beer(name, type));
+  }
+
+  public void RemoveBeer(string name)
+  {
+    Beers.RemoveAll(base => base.Name.Equals(name, System.StringComparison.OrdinalIgnoreCase));
+  }
+
+  public List<Beer> GetBeers()
+  {
+    return Beers;
+  }
 }
 
 
