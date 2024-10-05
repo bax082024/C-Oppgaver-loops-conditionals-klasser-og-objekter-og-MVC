@@ -11,6 +11,7 @@ namespace BeerMVC.Views
             Console.WriteLine(message);
         }
 
+        // Displays the list of beer
         public void DisplayBeers(List<Beer> beers)
         {
             Console.WriteLine("\nCurrent Beers:");
@@ -23,8 +24,9 @@ namespace BeerMVC.Views
         // Functions shown to user
         public void ShowMenu()
         {
+            Console.WriteLine("\nWelcome to the beer information program");
             Console.WriteLine("\n--- Beer Menu ---");
-            Console.WriteLine("1. Add a beer");
+            Console.WriteLine("\n1. Add a beer");
             Console.WriteLine("2. Remove a beer");
             Console.WriteLine("3. View beers");
             Console.WriteLine("4. Update beer description");
