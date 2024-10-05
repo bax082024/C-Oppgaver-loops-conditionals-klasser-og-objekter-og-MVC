@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using BeerMVC.Models; // Reference to use the Beer class
+using BeerMVC.Models; // added to use the beer class
 
 namespace BeerMVC.Views
 {

@@ -6,7 +6,7 @@ namespace BeerMVC.Controllers
 {
     public class Controller
     {
-        private Model model;
+        private Model model; // eksempel Constructor
         private View view;
 
         public Controller(Model model, View view)
@@ -15,6 +15,7 @@ namespace BeerMVC.Controllers
             this.view = view;
         }
 
+        // Action menu
         public void Run()
         {
             bool exit = false;
@@ -55,6 +56,7 @@ namespace BeerMVC.Controllers
             }
         }
 
+        // To add a beer
         private void AddBeer()
         {
             Console.Write("Enter beer name: ");
@@ -88,6 +90,7 @@ namespace BeerMVC.Controllers
             view.ShowMessage($"Beer '{name}' added successfully!");
         }
 
+        // To remove a beer
         private void RemoveBeer()
         {
             Console.Write("Enter the name of the beer to remove: ");
@@ -109,6 +112,7 @@ namespace BeerMVC.Controllers
             }
         }
 
+        // To update a beer
         private void UpdateBeerDescription()
         {
             Console.Write("Enter the name of the beer to update: ");
