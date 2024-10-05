@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace BeerMVC.Models
 {
+    // Beer class so we can assign values and describe the beer type.
     public class Beer
     {
         public string Name { get; set; }
