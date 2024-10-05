@@ -34,7 +34,8 @@ namespace BeerMVC.Models
                 new Beer("Heineken", "1873", "The best of the best"),
                 new Beer("Carlsberg", "1847", "A good second on the list"),
                 new Beer("Tuborg", "1880", "Littlebit cheaper but good"),
-                new Beer("Hansa", "1891", "Horrible taste")
+                new Beer("Hansa", "1891", "Horrible taste"),
+                new Beer("7Fjell", "2013", "Should be illegal! if you like mango tasting beer you need help.....")
             };
         }
 
