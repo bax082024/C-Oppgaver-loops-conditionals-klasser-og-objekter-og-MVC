@@ -20,13 +20,15 @@ namespace BeerMVC.Views
             }
         }
 
+        // Functions shown to user
         public void ShowMenu()
         {
             Console.WriteLine("\n--- Beer Menu ---");
             Console.WriteLine("1. Add a beer");
             Console.WriteLine("2. Remove a beer");
             Console.WriteLine("3. View beers");
-            Console.WriteLine("4. Exit");
+            Console.WriteLine("4. Update beer description");
+            Console.WriteLine("5. Exit Program");
         }
     }
 }
