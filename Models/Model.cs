@@ -1,19 +1,48 @@
+using System;
 using System.Collections.Generic;
 
-namespace BeerMVC.Models // Replace with your actual namespace
+namespace BeerMVC.Models
 {
-    public class Model
+    public class Beer
     {
-        private List<Beer> beers; // Ensure Beer class is defined
+        public string Name { get; set; }
+        public string EstablishedYear { get; set; }
+        public string Description { get; set; }
 
-        public Model()
+        // Constructor to initialize all properties
+        public Beer(string name, string establishedYear, string description)
         {
-            beers = new List<Beer>();
+            Name = name;
+            EstablishedYear = establishedYear;
+            Description = description;
         }
 
-        public void AddBeer(string name, string type)
+        // Override the ToString() method to return the desired output format
+        public override string ToString()
         {
-            beers.Add(new Beer(name, type)); // Make sure Beer class has the appropriate constructor
+            return $"\"{Name}\", \"established in {EstablishedYear}\", \"{Description}\"";
+        }
+    }
+
+    public class Model
+    {
+        private List<Beer> beers;
+
+        // Initialize the list of beers with the new format, using 3 arguments
+        public Model()
+        {
+            beers = new List<Beer>
+            {
+                new Beer("Heineken", "1873", "The best of the best"),
+                new Beer("Carlsberg", "1847", "A good second on the list"),
+                new Beer("Tuborg", "1880", "Littlebit cheaper but good")
+            };
+        }
+
+        // Updated AddBeer method to take the new properties
+        public void AddBeer(string name, string establishedYear, string description)
+        {
+            beers.Add(new Beer(name, establishedYear, description));
         }
 
         public bool RemoveBeer(string name)
@@ -25,6 +54,22 @@ namespace BeerMVC.Models // Replace with your actual namespace
                 return true;
             }
             return false;
+        }
+
+        public bool UpdateBeerType(string name, string newDescription)
+        {
+            var beerToUpdate = beers.Find(b => b.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
+            if (beerToUpdate != null)
+            {
+                beerToUpdate.Description = newDescription;
+                return true;
+            }
+            return false;
+        }
+
+        public List<Beer> GetBeers()
+        {
+            return beers;
         }
     }
 }

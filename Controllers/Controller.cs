@@ -1,11 +1,13 @@
 using System;
+using BeerMVC.Models;
+using BeerMVC.Views;
 
-namespace BeerMVC.Controllers // Replace with your actual namespace
+namespace BeerMVC.Controllers
 {
     public class Controller
     {
-        private Model model; // Ensure that the Model class is defined and accessible
-        private View view; // Ensure that the View class is defined and accessible
+        private Model model;
+        private View view;
 
         public Controller(Model model, View view)
         {
@@ -13,44 +15,127 @@ namespace BeerMVC.Controllers // Replace with your actual namespace
             this.view = view;
         }
 
-        public void AddBeer()
+        public void Run()
         {
-            Console.WriteLine("Enter beer name:");
-            string name = Console.ReadLine();
-
-            Console.WriteLine("Enter beer type:");
-            string type = Console.ReadLine();
-
-            // Check for null or empty values
-            if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(type))
+            bool exit = false;
+            while (!exit)
             {
-                view.ShowMessage("Beer name and type cannot be empty.");
-                return;
-            }
+                view.ShowMenu();
+                Console.Write("Choose an option: ");
+                string? choice = Console.ReadLine();
 
-            model.AddBeer(name, type); // Ensure AddBeer method exists in Model
-            view.ShowMessage("Beer added successfully!");
+                if (string.IsNullOrEmpty(choice))
+                {
+                    view.ShowMessage("Invalid input. Please enter a valid option.");
+                    continue;
+                }
+
+                switch (choice)
+                {
+                    case "1":
+                        AddBeer();
+                        break;
+                    case "2":
+                        RemoveBeer();
+                        break;
+                    case "3":
+                        view.DisplayBeers(model.GetBeers());
+                        break;
+                    case "4":
+                        UpdateBeerDescription();
+                        break;
+                    case "5":
+                        exit = true;
+                        view.ShowMessage("Exiting program...");
+                        break;
+                    default:
+                        view.ShowMessage("Invalid choice. Please try again.");
+                        break;
+                }
+            }
         }
 
-        public void RemoveBeer()
+        private void AddBeer()
         {
-            Console.WriteLine("Enter the name of the beer to remove:");
-            string name = Console.ReadLine();
+            Console.Write("Enter beer name: ");
+            string? name = Console.ReadLine();
 
-            // Check for null or empty value
             if (string.IsNullOrEmpty(name))
             {
                 view.ShowMessage("Beer name cannot be empty.");
                 return;
             }
 
-            if (model.RemoveBeer(name)) // Ensure RemoveBeer method exists in Model
+            Console.Write("Enter the year the beer was established: ");
+            string? establishedYear = Console.ReadLine();
+
+            if (string.IsNullOrEmpty(establishedYear))
             {
-                view.ShowMessage("Beer removed successfully!");
+                view.ShowMessage("Established year cannot be empty.");
+                return;
+            }
+
+            Console.Write("Enter a description for the beer: ");
+            string? description = Console.ReadLine();
+
+            if (string.IsNullOrEmpty(description))
+            {
+                view.ShowMessage("Description cannot be empty.");
+                return;
+            }
+
+            model.AddBeer(name, establishedYear, description);
+            view.ShowMessage($"Beer '{name}' added successfully!");
+        }
+
+        private void RemoveBeer()
+        {
+            Console.Write("Enter the name of the beer to remove: ");
+            string? name = Console.ReadLine();
+
+            if (string.IsNullOrEmpty(name))
+            {
+                view.ShowMessage("Beer name cannot be empty.");
+                return;
+            }
+
+            if (model.RemoveBeer(name))
+            {
+                view.ShowMessage($"Beer '{name}' removed successfully!");
             }
             else
             {
-                view.ShowMessage("Beer not found.");
+                view.ShowMessage($"Beer '{name}' not found.");
+            }
+        }
+
+        private void UpdateBeerDescription()
+        {
+            Console.Write("Enter the name of the beer to update: ");
+            string? name = Console.ReadLine();
+
+            if (string.IsNullOrEmpty(name))
+            {
+                view.ShowMessage("Beer name cannot be empty.");
+                return;
+            }
+
+            Console.Write("Enter the new description for the beer: ");
+            string? newDescription = Console.ReadLine();
+
+            if (string.IsNullOrEmpty(newDescription))
+            {
+                view.ShowMessage("New description cannot be empty.");
+                return;
+            }
+
+            if (model.UpdateBeerType(name, newDescription))
+            {
+                view.ShowMessage($"Beer '{name}' updated successfully!");
+            }
+            else
+            {
+                view.ShowMessage($"Beer '{name}' not found.");
             }
         }
     }

@@ -10,5 +10,6 @@
 
 
 ### How to use
+- dotnet run
 
-**Run MVC**
+- Follow intstructions to add,remove,view

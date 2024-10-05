@@ -1,18 +1,20 @@
-﻿using System;
-using BeerMVC.Controllers;
+﻿using BeerMVC.Controllers;
 using BeerMVC.Models;
 using BeerMVC.Views;
 
-class Program
+namespace BeerMVC
 {
-    static void Main(string[] args)
+    class Program
     {
-        // Create the Model, View, and Controller for Beer Management
-        Model model = new Model();
-        View view = new View();
-        Controller controller = new Controller(model, view);
+        static void Main(string[] args)
+        {
+            // Initialize Model, View, and Controller
+            Model model = new Model();
+            View view = new View();
+            Controller controller = new Controller(model, view);
 
-        // Start the application
-        controller.Run();
+            // Start the program
+            controller.Run();
+        }
     }
 }
