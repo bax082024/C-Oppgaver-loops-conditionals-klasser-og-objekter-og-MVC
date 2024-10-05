@@ -10,6 +10,7 @@
 
 
 ### How to use
+
 - dotnet run
 
-- Follow intstructions to add,remove,view 
+- Follow intstructions to add, remove, view and update items.
