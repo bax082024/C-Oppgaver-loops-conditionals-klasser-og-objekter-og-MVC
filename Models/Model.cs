@@ -40,7 +40,7 @@ namespace BeerMVC.Models
             };
         }
 
-        // Addbeer code
+        // Add beer code
         public void AddBeer(string name, string establishedYear, string description)
         {
             beers.Add(new Beer(name, establishedYear, description));
@@ -57,6 +57,7 @@ namespace BeerMVC.Models
             return false;
         }
 
+        // Update Beer type
         public bool UpdateBeerType(string name, string newDescription)
         {
             var beerToUpdate = beers.Find(b => b.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
