@@ -9,7 +9,6 @@ namespace BeerMVC.Models
         public string EstablishedYear { get; set; }
         public string Description { get; set; }
 
-        // Constructor to initialize all properties
         public Beer(string name, string establishedYear, string description)
         {
             Name = name;
@@ -17,7 +16,6 @@ namespace BeerMVC.Models
             Description = description;
         }
 
-        // Override the ToString() method to return the desired output format
         public override string ToString()
         {
             return $"\"{Name}\", \"established in {EstablishedYear}\", \"{Description}\"";
@@ -28,18 +26,19 @@ namespace BeerMVC.Models
     {
         private List<Beer> beers;
 
-        // Initialize the list of beers with the new format, using 3 arguments
+        // The list of beer
         public Model()
         {
             beers = new List<Beer>
             {
                 new Beer("Heineken", "1873", "The best of the best"),
                 new Beer("Carlsberg", "1847", "A good second on the list"),
-                new Beer("Tuborg", "1880", "Littlebit cheaper but good")
+                new Beer("Tuborg", "1880", "Littlebit cheaper but good"),
+                new Beer("Hansa", "1891", "Horrible taste")
             };
         }
 
-        // Updated AddBeer method to take the new properties
+        // Addbeer code
         public void AddBeer(string name, string establishedYear, string description)
         {
             beers.Add(new Beer(name, establishedYear, description));
